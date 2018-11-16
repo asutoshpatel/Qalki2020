@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center mt-5">
+  <div class="card">
+    <div class="card-body">
+      <form *ngIf="showSignUp">
+        <div Class="form-group">
+          <label for="exampleInputEmail1">Full Name</label>
+          <input type="email" class="form-control" [(ngModel)]="fullName" name="fullName" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" [(ngModel)]="email" name="email" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="password" name="password">
+        </div>
+        <button type="submit" class="btn btn-dark btn-block" (click)="signUp()">Submit</button>
+      </form>
+
+      <form *ngIf="!showSignUp">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" [(ngModel)]="email" name="email" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="password" name="password">
+        </div>
+        <button type="submit" class="btn btn-dark btn-block" (click)="login()">Submit</button>
+      </form>
+      <br>
+      <button type="submit" class="btn btn-dark btn-block" (click)="showSignUp = !showSignUp">
+        {{ showSignUp ? 'Sign In' : 'Sign Up'}}
+      </button>
+    </div>
+  </div>
+</div>

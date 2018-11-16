@@ -1,0 +1,40 @@
+* {
+  font-family: 'Cormorant Upright', serif;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 72px;
+  padding: 10px 40px;
+  cursor: pointer;
+  text-shadow: 0 0 10px #fff;
+}
+
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 0px #fff;
+  }
+  to {
+    text-shadow: 0 0 10px #fff;
+  }
+}
+
+.separator {
+  height: 2px;
+  background: radial-gradient(white, #5F5D5D);
+}
+
+h4, a {
+  position: absolute;
+  bottom: 0;
+  color: #EBEAEA;
+  cursor: pointer;
+}
+
