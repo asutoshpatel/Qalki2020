@@ -9,14 +9,16 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  fullName: string;
   email: string;
   password: string;
+  username: string;
+  signUpEmail: string;
+  signUpPassword: string;
+  fullName: string;
 
-  constructor(public afAuth: AngularFireAuth, private readonly router: Router, private authService: AuthService) {}
+  constructor( public afAuth: AngularFireAuth, private readonly router: Router, private authService: AuthService) { }
 
   ngOnInit() {
-    console.log('Current user ', this.authService.currentUser);
   }
 
   login() {
@@ -24,10 +26,11 @@ export class RegistrationComponent implements OnInit {
   }
 
   signUp() {
-    this.authService.signUp('', this.email, this.password).then(() => this.navigateToBook());
+    this.authService.signUp('', this.signUpEmail, this.signUpPassword).then(() => this.navigateToBook());
   }
 
   navigateToBook() {
-    this.router.navigate(['book']);
+    this.router.navigate(['/book']);
   }
+
 }

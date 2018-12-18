@@ -1,11 +1,12 @@
 <div class="row header">
   <div class="col-12 col-md-10">
-    <h1 (click)="titleClicked = !titleClicked" [ngClass]="{'glow': titleClicked}">Q</h1>
+    <h1 class="glow" (click)="goToBook()">Q</h1>
   </div>
   <div class="col-12 col-md-2">
-    <h4 *ngIf="authService.currentUser | async as currentUser; else showRegister">{{ currentUser.email }}</h4>
+    <span *ngIf="authService.isLoggedIn" (click)="signOut()" style="cursor: pointer;color: white"> Sign Out</span>
+    <h4 *ngIf="authService.isLoggedIn; else showRegister" (click)="goToProfile()">{{ authService.currentUser.email }}</h4>
     <ng-template #showRegister>
-      <a *ngIf="!lAoggedIn" style="color:white" routerLink="auth">Register</a>
+      <a *ngIf="!authService.isLoggedIn" style="color:white" routerLink="auth">Register</a>
     </ng-template>
   </div>
 </div>

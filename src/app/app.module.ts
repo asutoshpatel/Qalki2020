@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -12,19 +13,27 @@ import { AuthComponent } from './auth/auth.component';
 import { RoutingModule } from './app-routing.module';
 import { BookComponent } from './book/book.component';
 
+import { AngularEpubViewerModule } from 'angular-epub-viewer';
+import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
+import { ProfileComponent } from './profile/profile.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     AuthComponent,
-    BookComponent
+    BookComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    RoutingModule
+    RoutingModule,
+    AngularEpubViewerModule,
+    MDBBootstrapModulesPro.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

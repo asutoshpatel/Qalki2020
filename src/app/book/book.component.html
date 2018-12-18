@@ -1,16 +1,43 @@
-<div class="row">
-  <div class="col-12" style="padding: 70px 50px">
-    <img src="../assets/book.svg" alt="">
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col-12 col-md-1" style="padding: 70px 50px"><img src="../assets/book.svg" alt="" /></div> -->
+    <div class="col-12 book">
+      <div class="row">
+        <div class="col book-page-left">
+          <div class="row">
+            <div class="col-10 offset-sm-1 toolbar">
+              <div class="row align-items-center">
+                <div class="col"><img src="../../assets/layout.svg" /></div>
+                <div class="col"><img src="../../assets/color.svg" /></div>
+                <div class="col"><img src="../../assets/pencil.svg" /></div>
+                <div class="col"><img src="../../assets/bookmark.svg" /></div>
+              </div>
+              <div class="color-picker">
+                <div class="row">
+                  <div class="col">
+                    <div class="row my-3">
+                      <div class="col"><img src="../../assets/color.svg" /></div>
+                      <div class="col"><img src="../../assets/color2.svg" /></div>
+                      <div class="col"><img src="../../assets/color3.svg" /></div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <mdb-range-input id="range" min="1" value="50" max="100"></mdb-range-input>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col book-page-right" [innerHTML]="book"></div>
+      </div>
+    </div>
   </div>
 </div>
-  
-<div class="row">
-  <div class="col d-flex justify-content-center loading-message">
-    Thinking...
-  </div>
-</div>
-<div class="row">
-  <div class="col d-flex justify-content-center">
-    <div class="loader"></div>
-  </div>
+
+<div class="row" *ngIf="false"><div class="col d-flex justify-content-center loading-message">Thinking...</div></div>
+<div class="row" *ngIf="false">
+  <div class="col d-flex justify-content-center"><div class="loader"></div></div>
 </div>
