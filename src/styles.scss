@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: black;
+}
+
+.md-tabs {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  border: 0;
+  padding: 0.7rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: -20px;
+  background-color: gray;
+  z-index: 1;
+  position: relative;
+  border-radius: 0.25rem;
+}
+
+.tab-content {
+  background-color: #f1eded !important;
+}
