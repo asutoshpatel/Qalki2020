@@ -11,11 +11,11 @@ export class AppComponent {
   titleClicked = false;
   loggedIn = false;
 
-  constructor(public authService: AuthService, private readonly router: Router) {}
+  constructor(public auth: AuthService, private readonly router: Router) {}
 
   goToProfile() { this.router.navigate(['/profile']); }
 
   goToBook() { this.router.navigate(['/book']); }
 
-  signOut() { this.authService.signOut(); }
+  signOut() { this.auth.signOut(); }
 }

@@ -16,7 +16,8 @@ export class RegistrationComponent implements OnInit {
   signUpPassword: string;
   fullName: string;
 
-  constructor( public afAuth: AngularFireAuth, private readonly router: Router, private authService: AuthService) { }
+  constructor(public afAuth: AngularFireAuth, private readonly router: Router, private authService: AuthService) {
+  }
 
   ngOnInit() {
   }

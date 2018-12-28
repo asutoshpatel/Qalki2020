@@ -11,7 +11,7 @@ export const environment = {
     projectId: 'qalki-bec11',
     storageBucket: 'qalki-bec11.appspot.com',
     messagingSenderId: '391355654556'
-  }
+  },
 };
 
 /*

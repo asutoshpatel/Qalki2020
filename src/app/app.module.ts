@@ -8,6 +8,7 @@ import { RegistrationComponent } from './registration/registration.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { AuthComponent } from './auth/auth.component';
 import { RoutingModule } from './app-routing.module';
@@ -31,6 +32,7 @@ import { ProfileComponent } from './profile/profile.component';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    AngularFirestoreModule,
     RoutingModule,
     AngularEpubViewerModule,
     MDBBootstrapModulesPro.forRoot(),
