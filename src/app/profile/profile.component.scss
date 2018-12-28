@@ -1,3 +1,21 @@
 .profile {
   padding: 50px;
+  color: white;
+}
+
+i {
+  margin-left: 20px;
+}
+
+.activity-feed {
+  max-height: 300px;
+  overflow: scroll;
+}
+
+.bookshelf {
+  margin-top: 50px;
+
+  h3 {
+    border-bottom: 1px solid white;
+  }
 }

@@ -12,7 +12,7 @@ const appRoutes: Routes = [
   // { path: '**', redirectTo: '' },
   { path: 'book', component: BookComponent, canActivate: [AuthGuard]},
   { path: 'auth', component: RegistrationComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]}
+  { path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({
