@@ -1,15 +1,13 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from "@angular/core";
 
-import { ePub } from 'epubjs';
-import { AngularEpubViewerComponent } from 'angular-epub-viewer';
+import { AngularEpubViewerComponent } from "angular-epub-viewer";
 
 @Component({
-  selector: 'app-book',
-  templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css']
+  selector: "app-book",
+  templateUrl: "./book.component.html",
+  styleUrls: ["./book.component.css"]
 })
 export class BookComponent implements OnInit {
-
   book = `<div>
 	<p align="center">
 		Q: Human edition
@@ -1881,10 +1879,10 @@ feet to try and save someone random in the first place, so it was		<em>his</em> 
 
   `;
 
-  @ViewChild('epubViewer', { static: false })
+  @ViewChild("epubViewer", { static: false })
   epubViewer: AngularEpubViewerComponent;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     // const book = ePub('url/to/book/package.opf');
@@ -1892,11 +1890,8 @@ feet to try and save someone random in the first place, so it was		<em>his</em> 
     // const displayed = rendition.display();
   }
 
-
-
   openFile(event) {
     console.log(event.target.files);
     this.epubViewer.openFile(event.target.files[0]);
   }
-
 }
