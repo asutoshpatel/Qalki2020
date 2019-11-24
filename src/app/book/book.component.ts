@@ -1881,7 +1881,7 @@ feet to try and save someone random in the first place, so it was		<em>his</em> 
 
   `;
 
-  @ViewChild('epubViewer')
+  @ViewChild('epubViewer', { static: false })
   epubViewer: AngularEpubViewerComponent;
 
   constructor() { }
