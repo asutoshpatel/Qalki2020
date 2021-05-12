@@ -24,7 +24,7 @@
     "@types/chart.js": "^2.9.2",
     "angular-bootstrap-md": "^8.6.0",
     "angular-epub-viewer": "^0.1.4",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "core-js": "^3.4.2",
     "firebase": "^7.5.0",
     "font-awesome": "^4.7.0",
